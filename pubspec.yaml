@@ -32,6 +32,8 @@ dependencies:
   cached_network_image: ^3.3.1
   flutter_native_splash: ^2.3.10
   device_info_plus: ^9.1.2
+  connectivity_plus: ^5.0.2
+  translatron: ^1.0.0
 
 dev_dependencies:
   flutter_test:
@@ -44,8 +46,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+     - assets/images/
   #   - images/a_dot_ham.jpeg
 
   # fonts:
