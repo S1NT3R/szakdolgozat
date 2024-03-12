@@ -34,6 +34,16 @@ class AppRouter extends $AppRouter {
           transitionsBuilder: TransitionsBuilders.fadeIn,
         ),
         CustomRoute(
+          page: LoginRoute.page,
+          path: '/login',
+          transitionsBuilder: TransitionsBuilders.fadeIn,
+        ),
+        CustomRoute(
+          page: RegisterRoute.page,
+          path: '/register',
+          transitionsBuilder: TransitionsBuilders.fadeIn,
+        ),
+        CustomRoute(
           page: MainRoute.page,
           path: '/main',
           transitionsBuilder: TransitionsBuilders.fadeIn,
