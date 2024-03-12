@@ -5,23 +5,23 @@ import 'package:chore_champion/src/resources/interceptors/exception_interceptor.
 import 'package:chore_champion/src/resources/interceptors/token_interceptor.dart';
 import 'package:chore_champion/src/services/converter/built_value_converter.dart';
 
-part 'chores_service.chopper.dart';
+part 'chore_service.chopper.dart';
 
 @ChopperApi(baseUrl: KeyHelper.baseUrl)
 abstract class ChoresService extends ChopperService {
   @Post(path: 'api/chore')
   @multipart
   Future<Response> getChores(
-    @Part('active') int active,
-    @Part('completed') int completed,
+    @Part('active') int? active,
+    @Part('completed') int? completed,
   );
 
   @Post(path: 'api/chore/add')
   @multipart
   Future<Response> addChore(
     @Part('name') String name,
-    @Part('description') String description,
-    @Part('due_date') String dueDate,
+    @Part('description') String? description,
+    @Part('due_date') String? dueDate,
   );
 
   @Post(path: 'api/chore/update')
@@ -29,8 +29,8 @@ abstract class ChoresService extends ChopperService {
   Future<Response> updateChore(
     @Part('id') int id,
     @Part('name') String name,
-    @Part('description') String description,
-    @Part('due_date') String dueDate,
+    @Part('description') String? description,
+    @Part('due_date') String? dueDate,
   );
 
   @Post(path: 'api/chore/delete')

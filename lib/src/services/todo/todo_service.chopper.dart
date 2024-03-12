@@ -19,16 +19,16 @@ final class _$TodoService extends TodoService {
 
   @override
   Future<Response<dynamic>> getTodos(
-    int active,
-    int completed,
+    int? active,
+    int? completed,
   ) {
     final Uri $url = Uri.parse('https://localhost:8000/api/todo');
     final List<PartValue> $parts = <PartValue>[
-      PartValue<int>(
+      PartValue<int?>(
         'active',
         active,
       ),
-      PartValue<int>(
+      PartValue<int?>(
         'completed',
         completed,
       ),
@@ -46,8 +46,8 @@ final class _$TodoService extends TodoService {
   @override
   Future<Response<dynamic>> addTodo(
     String name,
-    String description,
-    String dueDate,
+    String? description,
+    String? dueDate,
   ) {
     final Uri $url = Uri.parse('https://localhost:8000/api/todo/add');
     final List<PartValue> $parts = <PartValue>[
@@ -55,11 +55,11 @@ final class _$TodoService extends TodoService {
         'name',
         name,
       ),
-      PartValue<String>(
+      PartValue<String?>(
         'description',
         description,
       ),
-      PartValue<String>(
+      PartValue<String?>(
         'due_date',
         dueDate,
       ),
@@ -78,8 +78,8 @@ final class _$TodoService extends TodoService {
   Future<Response<dynamic>> updateTodo(
     int id,
     String name,
-    String description,
-    String dueDate,
+    String? description,
+    String? dueDate,
   ) {
     final Uri $url = Uri.parse('https://localhost:8000/api/todo/update');
     final List<PartValue> $parts = <PartValue>[
@@ -91,11 +91,11 @@ final class _$TodoService extends TodoService {
         'name',
         name,
       ),
-      PartValue<String>(
+      PartValue<String?>(
         'description',
         description,
       ),
-      PartValue<String>(
+      PartValue<String?>(
         'due_date',
         dueDate,
       ),

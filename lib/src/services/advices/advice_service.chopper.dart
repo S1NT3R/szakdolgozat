@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'advices_service.dart';
+part of 'advice_service.dart';
 
 // **************************************************************************
 // ChopperGenerator

@@ -52,11 +52,11 @@ final class _$UserService extends UserService {
     final Uri $url = Uri.parse('https://localhost:8000/api/user/register');
     final List<PartValue> $parts = <PartValue>[
       PartValue<String>(
-        'email',
+        'name',
         name,
       ),
       PartValue<String>(
-        'name',
+        'email',
         email,
       ),
       PartValue<String>(

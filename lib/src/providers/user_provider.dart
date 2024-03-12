@@ -41,6 +41,7 @@ class UserProvider extends LoadingInterface {
     try {
       isLoading = true;
       await UserRepository.logout();
+      userModel = null;
       isAuthenticated = false;
       isLoading = false;
       return null;

@@ -12,16 +12,16 @@ abstract class TodoService extends ChopperService {
   @Post(path: 'api/todo')
   @multipart
   Future<Response> getTodos(
-    @Part('active') int active,
-    @Part('completed') int completed,
+    @Part('active') int? active,
+    @Part('completed') int? completed,
   );
 
   @Post(path: 'api/todo/add')
   @multipart
   Future<Response> addTodo(
     @Part('name') String name,
-    @Part('description') String description,
-    @Part('due_date') String dueDate,
+    @Part('description') String? description,
+    @Part('due_date') String? dueDate,
   );
 
   @Post(path: 'api/todo/update')
@@ -29,8 +29,8 @@ abstract class TodoService extends ChopperService {
   Future<Response> updateTodo(
     @Part('id') int id,
     @Part('name') String name,
-    @Part('description') String description,
-    @Part('due_date') String dueDate,
+    @Part('description') String? description,
+    @Part('due_date') String? dueDate,
   );
 
   @Post(path: 'api/todo/delete')

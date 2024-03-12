@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'chores_service.dart';
+part of 'chore_service.dart';
 
 // **************************************************************************
 // ChopperGenerator
@@ -19,16 +19,16 @@ final class _$ChoresService extends ChoresService {
 
   @override
   Future<Response<dynamic>> getChores(
-    int active,
-    int completed,
+    int? active,
+    int? completed,
   ) {
     final Uri $url = Uri.parse('https://localhost:8000/api/chore');
     final List<PartValue> $parts = <PartValue>[
-      PartValue<int>(
+      PartValue<int?>(
         'active',
         active,
       ),
-      PartValue<int>(
+      PartValue<int?>(
         'completed',
         completed,
       ),
@@ -46,8 +46,8 @@ final class _$ChoresService extends ChoresService {
   @override
   Future<Response<dynamic>> addChore(
     String name,
-    String description,
-    String dueDate,
+    String? description,
+    String? dueDate,
   ) {
     final Uri $url = Uri.parse('https://localhost:8000/api/chore/add');
     final List<PartValue> $parts = <PartValue>[
@@ -55,11 +55,11 @@ final class _$ChoresService extends ChoresService {
         'name',
         name,
       ),
-      PartValue<String>(
+      PartValue<String?>(
         'description',
         description,
       ),
-      PartValue<String>(
+      PartValue<String?>(
         'due_date',
         dueDate,
       ),
@@ -78,8 +78,8 @@ final class _$ChoresService extends ChoresService {
   Future<Response<dynamic>> updateChore(
     int id,
     String name,
-    String description,
-    String dueDate,
+    String? description,
+    String? dueDate,
   ) {
     final Uri $url = Uri.parse('https://localhost:8000/api/chore/update');
     final List<PartValue> $parts = <PartValue>[
@@ -91,11 +91,11 @@ final class _$ChoresService extends ChoresService {
         'name',
         name,
       ),
-      PartValue<String>(
+      PartValue<String?>(
         'description',
         description,
       ),
-      PartValue<String>(
+      PartValue<String?>(
         'due_date',
         dueDate,
       ),
